@@ -207,7 +207,7 @@ PROCESS_THREAD(udp_server_process, ev, data)
   PRINTF(" local/remote port %u/%u\n", UIP_HTONS(server_conn->lport),
          UIP_HTONS(server_conn->rport));
   
-  NETSTACK_MAC.off(1); //test TEST FUCVK TEST seems to work? Turns of RDC -> RX 100% 
+  NETSTACK_MAC.off(1); //Turns off RDC --> RX 100%, radio always on 
 
   while(1) {
     PROCESS_YIELD();
