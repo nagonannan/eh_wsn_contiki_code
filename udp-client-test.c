@@ -246,8 +246,8 @@ set_global_address(void)
   uip_ds6_set_addr_iid(&ipaddr, &uip_lladdr);
   uip_ds6_addr_add(&ipaddr, 0, ADDR_AUTOCONF);
 
-  //hardcoded server address to a specific z1 mote :) 
- 
+  // Hardcoded server address to a specific z1 mote with ID 151. Decimal 151 = Hexadecimal 97
+  // If Cooja Simulator is used for simulating the network, set server address to 1. 
 if (COOJA_SIM) uip_ip6addr(&server_ipaddr, UIP_DS6_DEFAULT_PREFIX, 0, 0, 0, 0, 0x00ff, 0xfe00, 1); 
 else uip_ip6addr(&server_ipaddr, 0xfe80, 0, 0, 0, 0xc30c, 0, 0, 0x0097);
 
